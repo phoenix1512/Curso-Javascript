@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>EJERCICIO 7</h1>
+
+      <p>Nombre<input type="text" id="name"></p>
+      <label for="gender">Genero</label>
+      <select  id="gender">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+      </select>
+      <br><button type="button" onclick="greet(document.getElementById('name').value,
+      document.getElementById('gender').value)">Saludar</button>
+
+  </body>
+  <script type="text/javascript">
+    function greet(name, gender)
+    {
+      let message = '';
+      message = `Bienvenid${gender == "masculino" ? "o"
+      : "a"} ${name}!`;
+      window.alert(message);
+    }
+    </script>
+</html>

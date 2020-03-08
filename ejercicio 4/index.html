@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>EJERCICIO 4</h1>
+    <p>Inserte Valores</p>
+    <p>Valor 1 <input type="text" id="valor1"></p>
+    <p>Valor 2 <input type="text" id="valor2"></p>
+    <p>
+      <label for="operacion">Tipo de Operacion</label>
+      <select id="operacion">
+        <option value="suma">Suma</option>
+        <option value="resta">Resta</option>
+        <option value="multi">Multiplicacion</option>
+      </select>
+    </p>
+    <button type="button" onclick="Calcular()">Calcular</button>
+     <p id="resultado"></p>
+  </body>
+  <script type="text/javascript">
+    function Calcular(){
+      let valor1 = parseFloat(document.getElementById('valor1').value);
+      let valor2 = parseFloat(document.getElementById('valor2').value);
+      let operacion = document.getElementById('operacion').value;
+      let resultado;
+
+      switch(operacion)
+      {
+        case 'suma':
+          resultado = valor1 + valor2;
+          break;
+        case 'resta':
+          resultado = valor1 - valor2;
+          break;
+        case 'multi':
+          resultado = valor1 * valor2;
+          break;
+      }
+      if(isNaN(resultado))
+        resultado = "Ha ocurrido un error con los datos";
+
+      document.getElementById("resultado").innerHTML = resultado;
+    }
+  </script>
+</html>

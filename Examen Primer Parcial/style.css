@@ -1,0 +1,15 @@
+img.poolTable {
+    cursor: pointer;
+}
+
+.column {
+    float: left;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}

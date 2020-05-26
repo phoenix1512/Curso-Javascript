@@ -4,8 +4,8 @@ const page = search_params.get('page') || 1;
 
 const baseUrl = 'http://gateway.marvel.com/v1/public/characters'
 const ts = '1';
-const apiKey = '7583f9326e73e064fe246e86ad9f14a1';
-const hash = '030d19a67bf9a0b83ac7aa640313b13e';
+const apiKey = '';
+const hash = '';
 
 const characterCount = 40;
 
